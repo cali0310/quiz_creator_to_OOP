@@ -8,3 +8,6 @@ class ScoreDisplay(tk.Label):
             font=("Helvetica", 12, "bold"),
             bg="#F5ECD5"
         )
+
+    def update_score(self, score):
+        self.config(text=f"Score: {score}")
