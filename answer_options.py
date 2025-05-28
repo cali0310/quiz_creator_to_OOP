@@ -6,20 +6,20 @@ class AnswerOptions(tk.Frame):
         self.selected_option = tk.StringVar()
         self.option_buttons = {}
 
-        for opt in ['a', 'b', 'c', 'd']:
-            rb = tk.Radiobutton(
+        for option_letter in ['a', 'b', 'c', 'd']:
+            radio_button = tk.Radiobutton(
                 self,
                 text="",
                 variable=self.selected_option,
-                value=opt,
+                value=option_letter,
                 font=("Helvetica", 12),
                 bg="#F5ECD5",
                 anchor="w",
                 justify="left",
                 wraplength=450
             )
-            rb.pack(anchor="w", pady=2)
-            self.option_buttons[opt] = rb
+            radio_button.pack(anchor="w", pady=2)
+            self.option_buttons[option_letter] = radio_button
 
     def update_choices(self, choices):
         for opt in ['a', 'b', 'c', 'd']:
