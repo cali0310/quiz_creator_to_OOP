@@ -20,3 +20,13 @@ class AnswerOptions(tk.Frame):
             )
             rb.pack(anchor="w", pady=2)
             self.option_buttons[opt] = rb
+
+    def update_choices(self, choices):
+        for opt in ['a', 'b', 'c', 'd']:
+            self.option_buttons[opt].config(text=f"{opt.upper()}. {choices[opt]}")
+
+    def get_selected(self):
+        return self.selected_option.get()
+
+    def clear_selection(self):
+        self.selected_option.set("")
